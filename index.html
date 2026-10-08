@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Recipe & Nutrition Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="header-top">
+        <h1>🍳 Recipe Studio</h1>
+        <div class="header-actions">
+          <button id="view-favorites-btn" class="nav-btn">❤️ Favorites (<span id="fav-count">0</span>)</button>
+          <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+        </div>
+      </div>
+      <p class="subtitle">Find delicious recipes based on ingredients you already have!</p>
+    </header>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <input type="text" id="search-input" placeholder="Enter ingredient or dish (e.g. chicken, pasta)..." value="POTATO" />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Category Filter Chips -->
+    <div class="category-chips">
+      <button class="chip active" data-category="all">All</button>
+      <button class="chip" data-category="Chicken">Chicken</button>
+      <button class="chip" data-category="Vegetarian">Vegetarian</button>
+      <button class="chip" data-category="Seafood">Seafood</button>
+      <button class="chip" data-category="Pasta">Pasta</button>
+      <button class="chip" data-category="Dessert">Dessert</button>
+      <button class="chip" data-category="Breakfast">Breakfast</button>
+    </div>
+
+    <main>
+      <div id="recipe-grid" class="recipe-grid"></div>
+      <div id="status-message" class="status-message"></div>
+    </main>
+  </div>
+
+  <!-- Recipe Detail Modal Popup -->
+  <div id="recipe-modal" class="modal-overlay">
+    <div class="modal-box">
+      <button id="close-modal" class="close-btn">&times;</button>
+      <div id="modal-details"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
